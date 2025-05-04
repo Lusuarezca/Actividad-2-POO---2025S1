@@ -1,1 +1,26 @@
+class Persona:
+    def __init__(self, nombre, apellido, documento, an_nacimiento, pais_nacimiento, genero):
+        self.nombre = nombre
+        self.apellido = apellido
+        self.documento = documento
+        self.an_nacimiento = an_nacimiento
+        self.pais_nacimiento = pais_nacimiento
+        self.genero = genero
 
+    def mostrar_info(self):
+        print(f"Nombre: {self.nombre}")
+        print(f"Apellido: {self.apellido}")
+        print(f"Documento: {self.documento}")
+        print(f"Año de nacimiento: {self.an_nacimiento}")
+        print(f"País de nacimiento: {self.pais_nacimiento}")
+        print(f"Género: {'Hombre' if self.genero == 'H' else 'Mujer'}")
+
+# Método principal
+if __name__ == "__main__":
+    persona1 = Persona("Mario", "Bros", "12345678", 1990, "Colombia", 'H')
+    persona2 = Persona("Ana", "Gabriel", "87654321", 1985, "Argentina", 'M')
+
+    print("Información de la primera persona:")
+    persona1.mostrar_info()
+    print("\nInformación de la segunda persona:")
+    persona2.mostrar_info()
